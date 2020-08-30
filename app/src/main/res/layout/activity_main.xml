@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:minHeight="?actionBarSize"
-                android:padding="@dimen/appbar_padding"
+                android:padding="@dimen/standard_padding"
                 android:text="@string/leaderboard_caps"
                 android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
 
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minHeight="?actionBarSize"
-                android:padding="@dimen/appbar_padding"
+                android:padding="@dimen/standard_padding"
                 android:text="@string/submit"
                 android:textAllCaps="false" />
         </LinearLayout>
@@ -41,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
+            app:tabIndicatorColor="@color/colorAccent"
             app:tabTextColor="@color/colorAccent" />
     </com.google.android.material.appbar.AppBarLayout>
 

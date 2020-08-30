@@ -1,9 +1,7 @@
 <resources>
-    <string name="app_name">GADS 2020 Leaderboard</string>
+    <string name="app_name">GADS 2020</string>
     <string name="learning_leaders">Learning Leaders</string>
     <string name="skill_iq_leaders">Skill IQ Leaders</string>
     <string name="leaderboard_caps">LEADERBOARD</string>
     <string name="submit">Submit</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
