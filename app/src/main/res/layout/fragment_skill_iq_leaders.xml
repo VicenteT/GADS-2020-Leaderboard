@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/standard_margin"
     tools:context=".ui.main.SkillIQLeadersFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/skill_iq_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/skill_iq_leaders" />
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

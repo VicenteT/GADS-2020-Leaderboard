@@ -4,4 +4,14 @@
     <string name="skill_iq_leaders">Skill IQ Leaders</string>
     <string name="leaderboard_caps">LEADERBOARD</string>
     <string name="submit">Submit</string>
+    <string name="learner_name">Learner name</string>
+    <string name="learning_hours">Learning hours</string>
+    <string name="skill_iq_leaders_description">Skill IQ Description</string>
+    <string name="skill_iq_learner_name">SkillIQ Learner name</string>
+    <string name="project_submission">Project Submission</string>
+    <string name="appbar_logo">AppBar Logo</string>
+    <string name="email_address">Email address</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="project_on_github_link">Project on GITHUB (link)</string>
 </resources>

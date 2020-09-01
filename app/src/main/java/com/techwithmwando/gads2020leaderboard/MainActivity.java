@@ -1,6 +1,10 @@
 package com.techwithmwando.gads2020leaderboard;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.viewpager.widget.ViewPager;
@@ -9,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.techwithmwando.gads2020leaderboard.ui.main.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
+
+    private MaterialButton submitProjectButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +26,18 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
+
+        submitProjectButton = findViewById(R.id.submit_project_button);
+        submitProjectButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                projectSubmissionActivity();
+            }
+        });
+    }
+
+    private void projectSubmissionActivity() {
+        Intent projectSubmission = new Intent(this, ProjectSubmissionActivity.class);
+        startActivity(projectSubmission);
     }
 }

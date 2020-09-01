@@ -5,12 +5,12 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/standard_margin"
     tools:context=".ui.main.LearningLeadersFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/learning_leader_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/learning_leaders" />
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
