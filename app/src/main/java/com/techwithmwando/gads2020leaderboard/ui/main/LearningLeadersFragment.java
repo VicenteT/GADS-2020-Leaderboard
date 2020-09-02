@@ -67,7 +67,6 @@ public class LearningLeadersFragment extends Fragment {
                         model.setBadgeUrl(jsonObject.getString("badgeUrl"));
                         learningLeadersModelList.add(model);
 
-
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
