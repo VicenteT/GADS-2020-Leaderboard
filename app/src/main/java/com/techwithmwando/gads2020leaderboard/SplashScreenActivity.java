@@ -13,8 +13,6 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     Animation logoAnimation;
 
-    private AppCompatImageView gadsLogo;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +20,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         logoAnimation = AnimationUtils.loadAnimation(this, R.anim.from_bottom);
 
-        gadsLogo = findViewById(R.id.gads_logo);
+        AppCompatImageView gadsLogo = findViewById(R.id.gads_logo);
 
         gadsLogo.setAnimation(logoAnimation);
         startNext();

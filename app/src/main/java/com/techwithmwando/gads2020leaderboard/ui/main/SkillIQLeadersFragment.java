@@ -18,7 +18,6 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.material.snackbar.Snackbar;
 import com.techwithmwando.gads2020leaderboard.R;
 import com.techwithmwando.gads2020leaderboard.adapters.SkillIQAdapter;
-import com.techwithmwando.gads2020leaderboard.models.LearningLeadersModel;
 import com.techwithmwando.gads2020leaderboard.models.SkillIQModel;
 
 import org.json.JSONArray;
@@ -32,11 +31,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class SkillIQLeadersFragment extends Fragment {
-    private static String skillIQLeadersUrl = "https://gadsapi.herokuapp.com/api/skilliq";
-    private JsonArrayRequest request;
-    private RequestQueue requestQueue;
     List<SkillIQModel> skillIQModelList;
-    SkillIQAdapter skillIQAdapter;
     RecyclerView recyclerView;
 
     @Override
@@ -54,36 +49,37 @@ public class SkillIQLeadersFragment extends Fragment {
     }
 
     private void loadSkillIQLeaders() {
-       request = new JsonArrayRequest(skillIQLeadersUrl, new Response.Listener<JSONArray>() {
-           @Override
-           public void onResponse(JSONArray response) {
-               JSONObject jsonObject = null;
-               for (int i = 0; i < response.length(); i++) {
+        String skillIQLeadersUrl = "https://gadsapi.herokuapp.com/api/skilliq";
+        JsonArrayRequest request = new JsonArrayRequest(skillIQLeadersUrl, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                JSONObject jsonObject;
+                for (int i = 0; i < response.length(); i++) {
 
-                   try {
-                       jsonObject = response.getJSONObject(i);
-                       SkillIQModel model = new SkillIQModel();
-                       model.setName(jsonObject.getString("name").toString());
-                       model.setCountry(jsonObject.getString("country").toString());
-                       model.setScore(jsonObject.getInt("score"));
-                       model.setBadgeUrl(jsonObject.getString("badgeUrl"));
-                       skillIQModelList.add(model);
+                    try {
+                        jsonObject = response.getJSONObject(i);
+                        SkillIQModel model = new SkillIQModel();
+                        model.setName(jsonObject.getString("name"));
+                        model.setCountry(jsonObject.getString("country"));
+                        model.setScore(jsonObject.getInt("score"));
+                        model.setBadgeUrl(jsonObject.getString("badgeUrl"));
+                        skillIQModelList.add(model);
 
-                       setupRecyclerView(skillIQModelList);
-                       
-                   } catch (JSONException e) {
-                       e.printStackTrace();
-                   }
-               }
-           }
-       }, new Response.ErrorListener() {
-           @Override
-           public void onErrorResponse(VolleyError error) {
-               Snackbar.make(getView(), "An Error occurred \n" + error,
-                       Snackbar.LENGTH_SHORT).show();
-           }
-       });
-        requestQueue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
+                        setupRecyclerView(skillIQModelList);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Snackbar.make(Objects.requireNonNull(getView()), "An Error occurred \n" + error,
+                        Snackbar.LENGTH_SHORT).show();
+            }
+        });
+        RequestQueue requestQueue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
         requestQueue.add(request);
     }
 
