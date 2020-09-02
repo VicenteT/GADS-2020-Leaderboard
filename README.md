@@ -2,6 +2,17 @@
 
 This is an assignment project from Google Developer Scholarship.
 
+##Screenshots
+<p float="left">
+  <img src="https://github.com/zephaniamwand0/GADS-2020-Leaderboard/blob/master/Screenshots/Screenshot_20200902-222427.png" width="100" />
+  <img src="https://github.com/zephaniamwand0/GADS-2020-Leaderboard/blob/master/Screenshots/Screenshot_20200902-222500.png" width="100" />
+  <img src="https://github.com/zephaniamwand0/GADS-2020-Leaderboard/blob/master/Screenshots/Screenshot_20200902-222506.png" width="100" />
+  <img src="https://github.com/zephaniamwand0/GADS-2020-Leaderboard/blob/master/Screenshots/Screenshot_20200902-222514.png" width="100" />
+  <img src="https://github.com/zephaniamwand0/GADS-2020-Leaderboard/blob/master/Screenshots/Screenshot_20200902-222530.png" width="100" />
+  <img src="https://github.com/zephaniamwand0/GADS-2020-Leaderboard/blob/master/Screenshots/Screenshot_20200902-222558.png" width="100" />
+  <img src="https://github.com/zephaniamwand0/GADS-2020-Leaderboard/blob/master/Screenshots/Screenshot_20200902-222615.png" width="100" />
+</p>
+
 ## Installation
 Clone this repository and import into **Android Studio**
 ```bash
